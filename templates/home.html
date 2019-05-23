@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">Pricing</h1>
+        <p class="lead">Psychological counseling is an important part for the healthy life of every person. Become
+            happier,
+            deal with internal problems - what could be more important?</p>
+    </div>
+    <div class="card-deck mb-3 text-center">
+        {% for product in products %}
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">{{ product.name }}</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">
+                        {% if product.price %}
+                            ${{ product.price }}
+                            <small>/month</small>
+                        {% else %}
+                            Free
+                        {% endif %}
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        {% for line in product.lines %}
+                            <li>{{ line }}</li>
+                        {% endfor %}
+                    </ul>
+                    <a href="{{ url_for("product_detail", slug=product.slug) }}"
+                       class="btn btn-lg btn-block btn-outline-primary">
+                        Details
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

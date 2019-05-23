@@ -1,0 +1,45 @@
+[
+  {
+    "name": "First session",
+    "slug": "first_session",
+    "lines": [
+      "Acquaintance",
+      "Problem identification",
+      "Prepare decision plan"
+    ],
+    "desctiption": "",
+    "price": 0
+  },
+  {
+    "name": "Maintenance therapy",
+    "slug": "maintenance_therapy",
+    "lines": [
+      "1 session/week",
+      "Problem identification",
+      "Prepare decision plan"
+    ],
+    "desctiption": "",
+    "price": 200
+  },
+  {
+    "name": "Intensive therapy",
+    "slug": "intensive_therapy",
+    "lines": [
+      "2 session/week",
+      "deep dive ",
+      "Prepare decision plan"
+    ],
+    "desctiption": "",
+    "price": 500
+  },
+  {
+    "name": "Life coaching",
+    "slug": "life_coaching",
+    "lines": [
+      "3 sessions/week",
+      "Guaranteed result"
+    ],
+    "desctiption": "",
+    "price": 1000
+  }
+]
